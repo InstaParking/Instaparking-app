@@ -1,0 +1,32 @@
+<%= simple_form_for @parking_place, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :description %>
+  <%= error_span(@parking_place[:description]) %>
+  <%= f.input :hourly_rate %>
+  <%= error_span(@parking_place[:hourly_rate]) %>
+  <%= f.input :daily_rate %>
+  <%= error_span(@parking_place[:daily_rate]) %>
+  <%= f.input :weekly_rate %>
+  <%= error_span(@parking_place[:weekly_rate]) %>
+  <%= f.input :monthly_rate %>
+  <%= error_span(@parking_place[:monthly_rate]) %>
+  <%= f.input :spaces_number %>
+  <%= error_span(@parking_place[:spaces_number]) %>
+  <%= f.input :address %>
+  <%= error_span(@parking_place[:address]) %>
+  <%= f.input :georeference_x %>
+  <%= error_span(@parking_place[:georeference_x]) %>
+  <%= f.input :georeference_y %>
+  <%= error_span(@parking_place[:georeference_y]) %>
+  <%= f.input :parking_type_id %>
+  <%= error_span(@parking_place[:parking_type_id]) %>
+  <%= f.input :owner_type_id %>
+  <%= error_span(@parking_place[:owner_type_id]) %>
+  <%= f.input :organization_id %>
+  <%= error_span(@parking_place[:organization_id]) %>
+  <%= f.input :user_id %>
+  <%= error_span(@parking_place[:user_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                parking_places_path, :class => 'btn btn-default' %>
+<% end %>

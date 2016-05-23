@@ -1,0 +1,24 @@
+<%= simple_form_for @availability_parking_place, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :day_of_week_id %>
+  <%= error_span(@availability_parking_place[:day_of_week_id]) %>
+  <%= f.input :start_date %>
+  <%= error_span(@availability_parking_place[:start_date]) %>
+  <%= f.input :finish_date %>
+  <%= error_span(@availability_parking_place[:finish_date]) %>
+  <%= f.input :hourly_rate %>
+  <%= error_span(@availability_parking_place[:hourly_rate]) %>
+  <%= f.input :daily_rate %>
+  <%= error_span(@availability_parking_place[:daily_rate]) %>
+  <%= f.input :weekly_rate %>
+  <%= error_span(@availability_parking_place[:weekly_rate]) %>
+  <%= f.input :monthly_rate %>
+  <%= error_span(@availability_parking_place[:monthly_rate]) %>
+  <%= f.input :spaces_number %>
+  <%= error_span(@availability_parking_place[:spaces_number]) %>
+  <%= f.input :parking_place_id %>
+  <%= error_span(@availability_parking_place[:parking_place_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                availability_parking_places_path, :class => 'btn btn-default' %>
+<% end %>

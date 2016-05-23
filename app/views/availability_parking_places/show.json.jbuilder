@@ -1,0 +1,1 @@
+json.extract! @availability_parking_place, :id, :day_of_week_id, :start_date, :finish_date, :hourly_rate, :daily_rate, :weekly_rate, :monthly_rate, :spaces_number, :parking_place_id, :created_at, :updated_at

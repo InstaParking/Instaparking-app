@@ -1,0 +1,10 @@
+<%= simple_form_for @booking_status, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@booking_status[:name]) %>
+  <%= f.input :description %>
+  <%= error_span(@booking_status[:description]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                booking_statuses_path, :class => 'btn btn-default' %>
+<% end %>

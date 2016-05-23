@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feedback_date: 2016-05-23 04:46:32
+  comment: MyText
+  score: 1
+  booking_id: 
+
+two:
+  feedback_date: 2016-05-23 04:46:32
+  comment: MyText
+  score: 1
+  booking_id: 

@@ -1,0 +1,2 @@
+module PaymentDocumentTypesHelper
+end

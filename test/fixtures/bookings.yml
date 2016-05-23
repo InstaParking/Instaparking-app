@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_date: 2016-05-23 04:34:42
+  start_date: 2016-05-23 04:34:42
+  finish_date: 2016-05-23 04:34:42
+  vehicle_plate: MyString
+  amount_payable: 9.99
+  booking_status_id: 
+  payment_type_id: 
+  parking_place_id: 
+  user_id: 
+
+two:
+  booking_date: 2016-05-23 04:34:42
+  start_date: 2016-05-23 04:34:42
+  finish_date: 2016-05-23 04:34:42
+  vehicle_plate: MyString
+  amount_payable: 9.99
+  booking_status_id: 
+  payment_type_id: 
+  parking_place_id: 
+  user_id: 

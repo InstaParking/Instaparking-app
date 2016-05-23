@@ -1,0 +1,24 @@
+<%= simple_form_for @booking, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :booking_date %>
+  <%= error_span(@booking[:booking_date]) %>
+  <%= f.input :start_date %>
+  <%= error_span(@booking[:start_date]) %>
+  <%= f.input :finish_date %>
+  <%= error_span(@booking[:finish_date]) %>
+  <%= f.input :vehicle_plate %>
+  <%= error_span(@booking[:vehicle_plate]) %>
+  <%= f.input :amount_payable %>
+  <%= error_span(@booking[:amount_payable]) %>
+  <%= f.input :booking_status_id %>
+  <%= error_span(@booking[:booking_status_id]) %>
+  <%= f.input :payment_type_id %>
+  <%= error_span(@booking[:payment_type_id]) %>
+  <%= f.input :parking_place_id %>
+  <%= error_span(@booking[:parking_place_id]) %>
+  <%= f.input :user_id %>
+  <%= error_span(@booking[:user_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                bookings_path, :class => 'btn btn-default' %>
+<% end %>

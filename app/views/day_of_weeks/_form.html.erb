@@ -1,0 +1,10 @@
+<%= simple_form_for @day_of_week, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@day_of_week[:name]) %>
+  <%= f.input :mnemonic %>
+  <%= error_span(@day_of_week[:mnemonic]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                day_of_weeks_path, :class => 'btn btn-default' %>
+<% end %>
