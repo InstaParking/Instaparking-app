@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_one :profile
+  has_many :organization
+  has
   
   enum role: [:user, :operator, :chef, :admin]
 
