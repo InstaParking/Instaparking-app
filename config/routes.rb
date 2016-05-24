@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/about_us'
+
+  get 'pages/faq'
+
+  get 'pages/contact_us'
+
   resources :availability_parking_places
   resources :day_of_weeks
   resources :payments
