@@ -26,7 +26,9 @@ Rails.application.routes.draw do
   resources :document_types
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-#  get 'home/index'
+  
+  get 'home/index', to: 'home#index', as: 'home'
+  
 
   root 'home#index' 
 
