@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
      
-      @q = ParkingPlace.ransack(params[:q])
+     @q = ParkingPlace.ransack(params[:q])
      @parks = @q.result
   
     #Lista de los parques no reservados
