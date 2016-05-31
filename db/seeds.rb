@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+DocumentType.delete_all
+
+# Document Types
+
+DocumentType.create(name: 'DNI', description: 'Documento Nacional de Identidad')
+DocumentType.create(name: 'RUC', description: 'Registro Unico de Contribuyentes')
+DocumentType.create(name: 'Pasaporte', description: 'Número de Pasaporte')
+DocumentType.create(name: 'CE', description: 'Carné de Extranjería')

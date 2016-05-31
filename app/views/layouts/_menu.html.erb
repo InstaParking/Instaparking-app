@@ -4,15 +4,3 @@
 <li><%= link_to "Preguntas frecuentes", pages_faq_path  %></li>
 
 <li><%= link_to "Reservas", bookings_path  %></li>
-
-<% if current_user %>
-    <li><%= link_to "Organizaciones", organizations_path  %></li>
-    <li><%= link_to "Miembros de la Organizacion", organization_members_path  %></li>
-    <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
-    <li><%= link_to "Bookings", booking_statuses_path  %></li>
-    <li><%= link_to "Feedbacks", feedbacks_path  %></li>
-    <% if current_user.chef? %>
-        <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
-    <% end %>    
-
-<% end %>
