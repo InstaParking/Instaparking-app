@@ -3,16 +3,20 @@
 <li><%= link_to "Contactanos", pages_contact_us_path  %></li>
 <li><%= link_to "Preguntas frecuentes", pages_faq_path  %></li>
 
-<li><%= link_to "Reservas", bookings_path  %></li>
+<<<<<<< HEAD
+
 
 <% if current_user %>
     <li><%= link_to "Organizaciones", organizations_path  %></li>
     <li><%= link_to "Miembros de la Organizacion", organization_members_path  %></li>
     <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
-    <li><%= link_to "Bookings", booking_statuses_path  %></li>
+    <li><%= link_to "Reservas", bookings_path  %></li>
     <li><%= link_to "Feedbacks", feedbacks_path  %></li>
     <% if current_user.chef? %>
         <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
     <% end %>    
 
 <% end %>
+=======
+<li><%= link_to "Reservas", bookings_path  %></li>
+>>>>>>> e0401a8feb4f77ddf3d4839ab176691e0f3affa8

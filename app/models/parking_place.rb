@@ -7,4 +7,5 @@ class ParkingPlace < ActiveRecord::Base
   
   geocoded_by :address, :latitude  => :georeference_x, :longitude => :georeference_y # ActiveRecord
   after_validation :geocode
+  has_many   :bookings
 end

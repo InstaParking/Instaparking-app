@@ -1,4 +1,4 @@
-class ParkingPlacesController < ApplicationController
+class ParkingPlacesController < PageAuthenticateController
   before_action :set_parking_place, only: [:show, :edit, :update, :destroy]
 
   # GET /parking_places
@@ -21,7 +21,7 @@ class ParkingPlacesController < ApplicationController
     @parking_place = ParkingPlace.new
   end
 
-  # GET /parking_places/1/edit
+  # GET /parking_places/1/editate
   def edit
   end
 

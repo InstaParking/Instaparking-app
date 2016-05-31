@@ -25,6 +25,11 @@ class User < ActiveRecord::Base
     self.profile
   end
 
+  def name
+    friendly_name
+    
+  end
+
   def friendly_name
     if self.default_profile.first_name.nil?
       self.email

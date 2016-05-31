@@ -1,4 +1,4 @@
-class OrganizationsController < ApplicationController
+class OrganizationsController < PageAuthenticateController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
   # GET /organizations
