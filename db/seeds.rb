@@ -12,6 +12,7 @@ OwnerType.delete_all
 ParkingType.delete_all
 PaymentDocumentType.delete_all
 PaymentType.delete_all
+ParkingPlace.delete_all
 
 # Document Types
 
@@ -45,4 +46,6 @@ PaymentDocumentType.create(name: 'Factura', description: 'Factura')
 PaymentType.create(name: 'Contado', description: 'Contado')
 PaymentType.create(name: 'Tarjeta de Crédito', description: 'Tarjeta de Crédito')
 PaymentType.create(name: 'Tarjeta de Débito', description: 'Tarjeta de Débito')
+
+# Parking Place
 
