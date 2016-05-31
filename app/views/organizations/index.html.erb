@@ -1,17 +1,18 @@
 <%- model_class = Organization -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.Organizacion'%>
+    <!--%=t '.title', :default => model_class.model_name.human.pluralize.titleize %--></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:ruc) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:numero) %></th>
+      <th><%= model_class.human_attribute_name(:Nombre_o_Razon_social) %></th>
+      <th><%= model_class.human_attribute_name(:Ruc) %></th>
+      <th><%= model_class.human_attribute_name(:Direccion) %></th>
+      <th><%= model_class.human_attribute_name(:Nombre_Usuario) %></th>
+      <th><%= model_class.human_attribute_name(:Creador) %></th>
+      <th><%=t '.actions', :default => t("helpers.acciones") %></th>
     </tr>
   </thead>
   <tbody>

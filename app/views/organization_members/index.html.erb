@@ -5,11 +5,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:member_type_id) %></th>
-      <th><%= model_class.human_attribute_name(:organization_id) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:Mumero) %></th>
+      <th><%= model_class.human_attribute_name(:Tipo_de_miembro) %></th>
+      <th><%= model_class.human_attribute_name(:Organizacion) %></th>
+      <th><%= model_class.human_attribute_name(:Usuario) %></th>
+      <th><%= model_class.human_attribute_name(:Creado) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= link_to organization_member.id, organization_member_path(organization_member) %></td>
         <td><%= organization_member.member_type_id %></td>
         <td><%= organization_member.organization_id %></td>
-        <td><%= organization_member.user_id %></td>
+        <td><%= organization_member.user.name %></td>
         <td><%=l organization_member.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
