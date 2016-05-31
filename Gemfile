@@ -61,3 +61,7 @@ gem 'devise-bootstrap-views'
 gem 'rails_admin'
 
 gem 'ransack'
+
+# Google Maps
+gem 'geocoder'
+gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'

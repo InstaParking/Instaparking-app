@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524013340) do
+ActiveRecord::Schema.define(version: 20160531023542) do
 
   create_table "availability_parking_places", force: :cascade do |t|
     t.integer  "day_of_week_id",   limit: 4
