@@ -1,11 +1,11 @@
 <%= simple_form_for @organization, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: "Nombre" %>
   <%= error_span(@organization[:name]) %>
-  <%= f.input :ruc %>
+  <%= f.input :ruc, label: "RUC" %>
   <%= error_span(@organization[:ruc]) %>
-  <%= f.input :address %>
+  <%= f.input :address, label: "Direccion" %>
   <%= error_span(@organization[:address]) %>
-  <%= f.input :user_id %>
+  <%= f.association :user, label: "Usuario" %>
   <%= error_span(@organization[:user_id]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>

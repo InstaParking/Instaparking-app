@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524013340) do
+ActiveRecord::Schema.define(version: 20160531031630) do
 
   create_table "availability_parking_places", force: :cascade do |t|
     t.integer  "day_of_week_id",   limit: 4
@@ -136,8 +136,8 @@ ActiveRecord::Schema.define(version: 20160524013340) do
     t.decimal  "monthly_rate",                  precision: 10
     t.integer  "spaces_number",   limit: 4
     t.string   "address",         limit: 255
-    t.decimal  "georeference_x",                precision: 10
-    t.decimal  "georeference_y",                precision: 10
+    t.float    "georeference_x",  limit: 24
+    t.float    "georeference_y",  limit: 24
     t.integer  "parking_type_id", limit: 4
     t.integer  "owner_type_id",   limit: 4
     t.integer  "organization_id", limit: 4

@@ -5,6 +5,7 @@ class ParkingTypesController < ApplicationController
   # GET /parking_types.json
   def index
     @parking_types = ParkingType.all
+    
   end
 
   # GET /parking_types/1

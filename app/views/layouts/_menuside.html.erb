@@ -1,0 +1,56 @@
+<% if current_user %>
+
+    <li><%= link_to "Dashboard", home_path  %> </li>
+    
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Reservas realizadas</a></li>
+        <li><a href="#">Reservas recibidas</a></li>
+        <!--<li><a href="#">Something else here</a></li>-->
+        <!--<li role="separator" class="divider"></li>-->
+        <!--<li><a href="#">Separated link</a></li>-->
+        <!--<li role="separator" class="divider"></li>-->
+        <!--<li><a href="#">One more separated link</a></li>-->
+      </ul>
+    </li>
+    
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estacionamientos <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Agregar estacionamiento", new_parking_place_path  %></li>
+        <li><%= link_to "Mis estacionamientos", parking_places_path  %></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Configuración</a></li>
+        <li><%= link_to "Agregar organización", new_organization_path  %></li>
+        <li><%= link_to "Mis organizaciones", organizations_path  %></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Procesos <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Registrar ingreso de vehículo</a></li>
+        <li><a href="#">Registrar sálida de vehículo</a></li>
+      </ul>
+    </li>
+
+<!--    
+    <li><%= link_to "Reservas", bookings_path  %></li>
+
+    <li><%= link_to "Organizaciones", organizations_path  %></li>
+    <li><%= link_to "Miembros de la Organizacion", organization_members_path  %></li>
+    <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
+    <li><%= link_to "Bookings", booking_statuses_path  %></li>
+    <li><%= link_to "Feedbacks", feedbacks_path  %></li>
+    <% if current_user.chef? %>
+        <li><%= link_to "Lugares de Estacionamiento", parking_places_path  %></li>
+    <% end %>    
+-->
+
+<% end %>
