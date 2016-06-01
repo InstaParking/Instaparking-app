@@ -5,20 +5,20 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:feedback_date) %></th>
-      <th><%= model_class.human_attribute_name(:comment) %></th>
-      <th><%= model_class.human_attribute_name(:score) %></th>
-      <th><%= model_class.human_attribute_name(:booking_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      
+      
+      <th><%= model_class.human_attribute_name(:Comentario) %></th>
+      <th><%= model_class.human_attribute_name(:Puntaje) %></th>
+      <th><%= model_class.human_attribute_name(:Codigo_Reserva) %></th>
+      <th><%= model_class.human_attribute_name(:Creado) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @feedbacks.each do |feedback| %>
       <tr>
-        <td><%= link_to feedback.id, feedback_path(feedback) %></td>
-        <td><%= feedback.feedback_date %></td>
+        
+        
         <td><%= feedback.comment %></td>
         <td><%= feedback.score %></td>
         <td><%= feedback.booking_id %></td>

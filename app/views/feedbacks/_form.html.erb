@@ -1,8 +1,8 @@
 <%= simple_form_for @feedback, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :feedback_date %>
   <%= error_span(@feedback[:feedback_date]) %>
-  <%= f.input :comment %>
-  <%= error_span(@feedback[:comment]) %>
+  <%= f.input :Comentario %>
+  <%= error_span(@feedback[:Comentario]) %>
   <%= f.input :score %>
   <%= error_span(@feedback[:score]) %>
   <%= f.input :booking_id %>
