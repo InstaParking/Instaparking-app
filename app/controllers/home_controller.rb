@@ -13,6 +13,17 @@ class HomeController < ApplicationController
      #@park =  ParkingPlace.all
   end
   
+  def search
+      
+      @parking_places = ParkingPlace.search(params[:search_text]).result
+      if @parking_places
+          @current_mode = 'results'
+      else
+          @current_mode = 'default'
+      end  
+      
+  end
+  
   def filter 
    
      respond_to do |format|

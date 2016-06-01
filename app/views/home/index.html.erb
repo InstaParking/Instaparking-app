@@ -15,6 +15,9 @@
         <%=park.organization_id%>
         
         <%end%>
+<% if @parking_places %>
+  <%= render 'tabla' %>
+<% end %>  
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
