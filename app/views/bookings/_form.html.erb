@@ -9,12 +9,14 @@
   <%= error_span(@booking[:vehicle_plate]) %>
   <%= f.input :amount_payable %>
   <%= error_span(@booking[:amount_payable]) %>
-  <%= f.input :booking_status_id %>
-  <%= error_span(@booking[:booking_status_id]) %>
-  <%= f.input :payment_type_id %>
-  <%= error_span(@booking[:payment_type_id]) %>
-  <%= f.input :parking_place_id %>
-  <%= error_span(@booking[:parking_place_id]) %>
+
+  
+  
+  <%= f.association :payment_type, label_method: :name %>
+  <%= f.association :parking_place, label_method: :description %>
+   
+  
+  
   <%= f.input :user_id %>
   <%= error_span(@booking[:user_id]) %>
 
