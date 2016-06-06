@@ -47,5 +47,3 @@ PaymentType.create(name: 'Contado', description: 'Contado')
 PaymentType.create(name: 'Tarjeta de Crédito', description: 'Tarjeta de Crédito')
 PaymentType.create(name: 'Tarjeta de Débito', description: 'Tarjeta de Débito')
 
-# Parking Place
-

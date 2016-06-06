@@ -3,25 +3,18 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 <%- model_class = ParkingPlace -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.Estacionamientos'%>
+    <!--%=t '.title', :default => model_class.model_name.human.pluralize.titleize %--></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:Numero) %></th>
       <th><%= model_class.human_attribute_name(:Descripcion) %></th>
-      <th><%= model_class.human_attribute_name(:Tarifa_por_hora) %></th>
-      <th><%= model_class.human_attribute_name(:Tarifa_por_dia) %></th>
-      <th><%= model_class.human_attribute_name(:Tarifa_semanal) %></th>
-      <th><%= model_class.human_attribute_name(:Tarifa_mensual) %></th>
       <th><%= model_class.human_attribute_name(:Numero_espacios) %></th>
       <th><%= model_class.human_attribute_name(:Direccion) %></th>
-      <th><%= model_class.human_attribute_name(:Georeferencia_x) %></th>
-      <th><%= model_class.human_attribute_name(:Georeferencia_y) %></th>
       <th><%= model_class.human_attribute_name(:Tipo_de_estacionamiento) %></th>
-      <th><%= model_class.human_attribute_name(:Tipo_de_propietario) %></th>
       <th><%= model_class.human_attribute_name(:Organizacion) %></th>
-      <th><%= model_class.human_attribute_name(:Usuario) %></th>
       <th><%= model_class.human_attribute_name(:Creacion) %></th>
       <th><%=t '.actions', :default => t("helpers.Acciones") %></th>
     </tr>
@@ -31,18 +24,10 @@
       <tr>
         <td><%= link_to parking_place.id, parking_place_path(parking_place) %></td>
         <td><%= parking_place.description %></td>
-        <td><%= parking_place.hourly_rate %></td>
-        <td><%= parking_place.daily_rate %></td>
-        <td><%= parking_place.weekly_rate %></td>
-        <td><%= parking_place.monthly_rate %></td>
         <td><%= parking_place.spaces_number %></td>
         <td><%= parking_place.address %></td>
-        <td><%= parking_place.georeference_x %></td>
-        <td><%= parking_place.georeference_y %></td>
-        <td><%= parking_place.parking_type_id %></td>
-        <td><%= parking_place.owner_type_id %></td>
-        <td><%= parking_place.organization_id %></td>
-        <td><%= parking_place.user_id %></td>
+        <td><%= parking_place.parking_type %></td>
+        <td><%= parking_place.organization %></td>
         <td><%=l parking_place.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
