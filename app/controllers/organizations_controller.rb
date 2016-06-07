@@ -4,7 +4,7 @@ class OrganizationsController < PageAuthenticateController
   # GET /organizations
   # GET /organizations.json
   def index
-    @organizations = Organization.all
+    @organizations = Organization.where("user_id=" + current_user.id.to_s)
   end
 
   # GET /organizations/1
@@ -25,6 +25,8 @@ class OrganizationsController < PageAuthenticateController
   # POST /organizations.json
   def create
     @organization = Organization.new(organization_params)
+    @organization.user = current_user
+    
 
     respond_to do |format|
       if @organization.save
