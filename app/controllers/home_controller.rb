@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  def search_parking
+  end
   def index
      
      @q = ParkingPlace.ransack(params[:q])
@@ -11,6 +13,21 @@ class HomeController < ApplicationController
      
      
      #@park =  ParkingPlace.all
+  end
+  def search_parking
+   
+     
+     @q = ParkingPlace.ransack(params[:q])
+     @parks = @q.result
+  
+    #Lista de los parques no reservados
+    ids = Booking.all.map(&:parking_place_id).to_a
+    
+     @park =   @parks.where.not(id: ids)
+     
+     
+     #@park =  ParkingPlace.all
+  
   end
   
   def search

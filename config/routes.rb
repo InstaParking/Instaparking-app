@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get 'home/search_parking'
+
+  get 'pages/search_parking'
   
   get 'pages/about_us'
 

@@ -26,8 +26,8 @@
         <td><%= parking_place.description %></td>
         <td><%= parking_place.spaces_number %></td>
         <td><%= parking_place.address %></td>
-        <td><%= parking_place.parking_type %></td>
-        <td><%= parking_place.organization %></td>
+        <td><%= parking_place.parking_type.name %></td>
+        <td><%= parking_place.organization.name %></td>
         <td><%=l parking_place.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
