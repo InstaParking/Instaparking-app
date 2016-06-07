@@ -22,7 +22,7 @@
         <td><%= organization.name %></td>
         <td><%= organization.ruc %></td>
         <td><%= organization.address %></td>
-        <td><%= organization.user_id %></td>
+        <td><%= organization.user.name %></td>
         <td><%=l organization.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

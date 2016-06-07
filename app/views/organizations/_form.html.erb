@@ -5,8 +5,8 @@
   <%= error_span(@organization[:ruc]) %>
   <%= f.input :address, label: "Direccion" %>
   <%= error_span(@organization[:address]) %>
-  <%= f.association :user, label: "Usuario" %>
-  <%= error_span(@organization[:user_id]) %>
+  <!--<%= f.association :user, label: "Usuario" %>-->
+  <!--<%= error_span(@organization[:user_id]) %>-->
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
