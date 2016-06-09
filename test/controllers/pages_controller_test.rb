@@ -16,4 +16,9 @@ class PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get opinion" do
+    get :opinion
+    assert_response :success
+  end
+  
 end

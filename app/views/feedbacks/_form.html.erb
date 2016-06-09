@@ -1,11 +1,11 @@
 <%= simple_form_for @feedback, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :feedback_date %>
+  <%= f.input :feedback_date, label: "Fecha de opinion" %>
   <%= error_span(@feedback[:feedback_date]) %>
-  <%= f.input :comment %>
+  <%= f.input :comment, label: "Comentario" %>
   <%= error_span(@feedback[:comment]) %>
-  <%= f.input :score %>
+  <%= f.input :score, label: "Puntaje"  %>
   <%= error_span(@feedback[:score]) %>
-  <%= f.input :booking_id %>
+  <%= f.input :booking_id, label: "Reserva" %>
   <%= error_span(@feedback[:booking_id]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>

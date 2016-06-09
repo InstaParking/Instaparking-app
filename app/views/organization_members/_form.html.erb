@@ -1,5 +1,5 @@
 <%= simple_form_for @organization_member, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :member_type_id, label: "Tipo de miembro"%>
+  <%= f.association :member_type, label: "Tipo de miembro"%>
   <%= error_span(@organization_member[:member_type_id]) %>
   <%= f.association :organization, label: "Organizacion"%>
   <%= error_span(@organization_member[:organization_id]) %>

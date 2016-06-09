@@ -8,17 +8,17 @@
 <% end %>
 
         <%for park in @park%>
-      
+      <hr/>
         <%=park.description%>
         <%=park.address%>
         <%=park.parking_type_id%>
         <%=park.organization_id%>
         
         <%end%>
+        
 <% if @parking_places %>
   <%= render 'tabla' %>
 <% end %>  
-
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 

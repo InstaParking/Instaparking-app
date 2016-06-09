@@ -17,8 +17,8 @@
     <% @organization_members.each do |organization_member| %>
       <tr>
         <td><%= link_to organization_member.id, organization_member_path(organization_member) %></td>
-        <td><%= organization_member.member_type_id %></td>
-        <td><%= organization_member.organization_id %></td>
+        <td><%= organization_member.member_type.name %></td>
+        <td><%= organization_member.organization.name %></td>
         <td><%= organization_member.user.name %></td>
         <td><%=l organization_member.created_at %></td>
         <td>
