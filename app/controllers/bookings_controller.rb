@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new]
 
   # GET /bookings
   # GET /bookings.json
@@ -14,7 +15,14 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
+    if params[:id].nil?
     @booking = Booking.new
+  else 
+    @id= params[:id]
+    @booking = Booking.new
+    @booking.parking_place_id= @id
+    @booking.user_id=current_user.id
+    end
   end
 
   # GET /bookings/1/edit

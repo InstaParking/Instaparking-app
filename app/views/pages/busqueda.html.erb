@@ -8,14 +8,43 @@
   <%= f.submit %>
 <% end %>
 
-        <%for park in @park%>
-      <hr/>
-        <%=park.description%>
-        <%=park.address%>
-        <%=park.parking_type_id%>
-        <%=park.organization_id%>
+        <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Descripcion </th>
+      <th>Direccion</th>
+      <th>Precio por Hora</th>
+      <th>Precio por Dia</th>
+      <th>Precio por Semana</th>
+      <th>Precio por Mes</th>
+      <th>Numero de espacios</th>
+      
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @parks.each do |park| %>
+      <tr>
         
-        <%end%>
+        <td><%= park.description %></td>
+        <td><%= park.address %></td>
+        <td><%= park.hourly_rate %></td>
+        <td><%= park.daily_rate %></td>
+        <td><%= park.weekly_rate %></td>
+        <td><%= park.monthly_rate %></td>
+        <td><%= park.spaces_number %></td>
+        
+       
+        <td>
+          <%= link_to "Rerservar", controller: "bookings", action: "new", id: park, :class => 'btn btn-default btn-xs' %>
+          
+          
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+        
         
 <% if @parking_places %>
   <%= render 'tabla' %>
