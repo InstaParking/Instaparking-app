@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def search_parking
   end
+  
   def index
      
      @q = ParkingPlace.ransack(params[:q])
@@ -14,6 +15,7 @@ class HomeController < ApplicationController
      
      #@park =  ParkingPlace.all
   end
+  
   def search_parking
    
      

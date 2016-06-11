@@ -1,24 +1,25 @@
-<%= search_form_for @q, url: home_path do |f| %>
+<!--%= search_form_for @q, url: home_path do |f| %-->
+
 
   
-  <%= f.label :description_cont %>
-  <%= f.search_field :description_cont %>
+  <!--%= f.label :description_cont %-->
+  <!--%= f.search_field :description_cont %-->
 
-  <%= f.submit %>
-<% end %>
+  <!--%= f.submit %-->
+<!--% end %-->
 
-        <%for park in @park%>
-      <hr/>
-        <%=park.description%>
-        <%=park.address%>
-        <%=park.parking_type_id%>
-        <%=park.organization_id%>
+        <!--%for park in @park%-->
         
-        <%end%>
+        <!--%=park.description%-->
+        <!--%=park.address%-->
+        <!--%=park.parking_type_id%-->
+        <!--%=park.organization_id%-->
         
-<% if @parking_places %>
-  <%= render 'tabla' %>
-<% end %>  
+        <!--%end%>
+        
+<!--% if @parking_places %-->
+  <!--%= render 'tabla' %-->
+<!--% end %--> 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -27,9 +28,7 @@
   <ol class="carousel-indicators">
 
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 
   </ol>
@@ -47,7 +46,6 @@
         <h3>Bienvenido</h3>
         
        
-        
         <p></p>
 
       </div>

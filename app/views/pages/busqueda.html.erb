@@ -1,0 +1,22 @@
+
+
+<%= search_form_for @q, url: pages_busqueda_path do |f| %>
+
+  <%= f.label :description_cont %>
+  <%= f.search_field :description_cont %>
+
+  <%= f.submit %>
+<% end %>
+
+        <%for park in @park%>
+      <hr/>
+        <%=park.description%>
+        <%=park.address%>
+        <%=park.parking_type_id%>
+        <%=park.organization_id%>
+        
+        <%end%>
+        
+<% if @parking_places %>
+  <%= render 'tabla' %>
+<% end %> 

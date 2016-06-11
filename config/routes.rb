@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'pages/busqueda'
+
   get 'pages/opinion'
 
   get 'home/search_parking'
