@@ -20,6 +20,11 @@ class PagesController < ApplicationController
     
      @park =   @parks.where.not(id: ids)
       
+      @hash = Gmaps4rails.build_markers(@park) do |parking_place, marker|
+      marker.lat parking_place.georeference_x
+      marker.lng parking_place.georeference_y
+    end
+      
   end
   
 end

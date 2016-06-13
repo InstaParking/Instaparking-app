@@ -18,16 +18,12 @@
   <dd><%= @parking_place.spaces_number %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
   <dd><%= @parking_place.address %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:georeference_x) %>:</strong></dt>
-  <dd><%= @parking_place.georeference_x %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:georeference_y) %>:</strong></dt>
-  <dd><%= @parking_place.georeference_y %></dd>
   <dt><strong><%= model_class.human_attribute_name(:parking_type_id) %>:</strong></dt>
-  <dd><%= @parking_place.parking_type_id %></dd>
+  <dd><%= @parking_place.parking_type.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:owner_type_id) %>:</strong></dt>
-  <dd><%= @parking_place.owner_type_id %></dd>
+  <dd><%= @parking_place.owner_type.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:organization_id) %>:</strong></dt>
-  <dd><%= @parking_place.organization_id %></dd>
+  <dd><%= @parking_place.organization.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @parking_place.user_id %></dd>
 </dl>
