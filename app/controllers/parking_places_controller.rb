@@ -20,6 +20,7 @@ class ParkingPlacesController < PageAuthenticateController
   # GET /parking_places/new
   def new
     @parking_place = ParkingPlace.new
+    @parking_place.user_id=current_user.id
   end
 
   # GET /parking_places/1/editate
