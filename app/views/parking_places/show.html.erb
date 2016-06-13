@@ -25,7 +25,7 @@
   <dt><strong><%= model_class.human_attribute_name(:organization_id) %>:</strong></dt>
   <dd><%= @parking_place.organization.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @parking_place.user_id %></dd>
+  <dd><%= @parking_place.user.name %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

@@ -19,7 +19,7 @@
   <%= error_span(@parking_place[:owner_type_id]) %>
   <%= f.association :organization, label: "Organizacion" %>
   <%= error_span(@parking_place[:organization_id]) %>
-  <%= f.association  :user, label: "Usuario asignado", disabled: true %>
+  <%= f.association  :user, label: "Usuario asignado" %>
   <%= error_span(@parking_place[:user_id]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
