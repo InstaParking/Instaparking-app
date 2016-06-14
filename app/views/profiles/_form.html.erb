@@ -1,7 +1,10 @@
-<%= simple_form_for(@profile) do |f| %>
+<%= simple_form_for @profile, url: profile_path do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= image_tag @profile.photo.url(:medium), class: "img-circle" %>
+    <%= f.input :photo, as: :file %>
+
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.association :document_type %>

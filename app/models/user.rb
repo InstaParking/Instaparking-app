@@ -10,19 +10,16 @@ class User < ActiveRecord::Base
   enum role: [:user, :operator, :chef, :admin]
 
   after_initialize :set_default_role
+  after_create :set_default_profile
 
   def set_default_role
     self.role ||= :user
   end
 
-  def default_profile
-    if self.profile.nil?
-      profile = Profile.new
-      profile.user = self
-      profile.save
-      self.save      
-    end
-    self.profile
+  def set_default_profile
+    profile = Profile.new
+    profile.user = self
+    profile.save
   end
 
   def name
@@ -31,11 +28,7 @@ class User < ActiveRecord::Base
   end
 
   def friendly_name
-    if self.default_profile.first_name.nil?
-      self.email
-    else
-      self.profile.full_name
-    end
+    self.profile.first_name.nil? ? self.email : self.profile.full_name
   end
 
 end
