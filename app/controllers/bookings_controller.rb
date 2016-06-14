@@ -18,9 +18,9 @@ class BookingsController < ApplicationController
     if params[:id].nil?
     @booking = Booking.new
   else 
-    @id= params[:id]
+    @id = params[:id]
     @booking = Booking.new
-    @booking.parking_place_id= @id
+    @booking.parking_place_id = @id
     @booking.user_id=current_user.id
     end
   end
@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
-
+    @booking.user_id=current_user.id
     respond_to do |format|
       if @booking.save
         format.html { redirect_to @booking, notice: 'Booking was successfully created.' }

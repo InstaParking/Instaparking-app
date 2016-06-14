@@ -10,18 +10,11 @@
   <%= f.input :amount_payable, label: 'Monto' %>
   <%= error_span(@booking[:amount_payable]) %>
 
-  
-  
   <%= f.association :payment_type, label_method: :name, label: 'Tipo de Pago' %>
-  <%= f.association :parking_place, label_method: :description, label: 'Nombre del estacionamiento' %>
+  <%= f.association :parking_place, label_method: :description, label: 'Nombre del estacionamiento', readonly: true %>
   
   
   
-   
-  
-  
-  
-
   <%= f.button :submit, :class => 'btn-primary' %>
   <% if @id.nil?%>
   
@@ -30,5 +23,19 @@
   <% else  %>
   <%=link_to t('.cancel', :default => t("helpers.links.cancel")),
                 pages_busqueda_path, :class => 'btn btn-default'%> 
+                
+                
 <% end %>
+
+    <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>
