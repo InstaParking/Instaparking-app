@@ -8,14 +8,15 @@ en:
     pages:
       pages: "Pages"
   helpers:
-    actions: "Actions"
+    actions: "Acciones"
     links:
-      back: "Back"
-      cancel: "Cancel"
-      confirm: "Are you sure?"
-      destroy: "Delete"
-      new: "New"
-      edit: "Edit"
+      back: "Atrás"
+      cancel: "Cancelar"
+      confirm: "Esta seguro?"
+      destroy: "Eliminar"
+      new: "Nuevo"
+      edit: "Editar"
+      viewmembers: "Ver Miembros"
     titles:
       edit: "Edit %{model}"
       save: "Save %{model}"

@@ -25,6 +25,8 @@
         <td><%= organization.user.name %></td>
         <td><%=l organization.created_at %></td>
         <td>
+          <%= link_to t('.edit', :default => t("helpers.links.viewmembers")),
+                      organization_members_path(:organization_id => organization), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_organization_path(organization), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

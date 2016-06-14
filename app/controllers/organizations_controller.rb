@@ -27,6 +27,13 @@ class OrganizationsController < PageAuthenticateController
     @organization = Organization.new(organization_params)
     @organization.user = current_user
     
+    organization_member = OrganizationMember.new
+    organization_member.member_type = MemberType.find_by(name: 'Administrador')
+    organization_member.organization = @organization
+    organization_member.user = current_user
+    
+    @organization.organization_member.push(organization_member)
+    
 
     respond_to do |format|
       if @organization.save

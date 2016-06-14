@@ -16,34 +16,34 @@ ParkingPlace.delete_all
 
 # Document Types
 
-DocumentType.create(name: 'DNI', description: 'Documento Nacional de Identidad')
-DocumentType.create(name: 'RUC', description: 'Registro Unico de Contribuyentes')
-DocumentType.create(name: 'Pasaporte', description: 'Número de Pasaporte')
-DocumentType.create(name: 'CE', description: 'Carné de Extranjería')
+DocumentType.create(id:1, name: 'DNI', description: 'Documento Nacional de Identidad')
+DocumentType.create(id:2, name: 'RUC', description: 'Registro Unico de Contribuyentes')
+DocumentType.create(id:3, name: 'Pasaporte', description: 'Número de Pasaporte')
+DocumentType.create(id:4, name: 'CE', description: 'Carné de Extranjería')
 
 # Member Types
 
-MemberType.create(name: 'Administrador', description: 'Administrador de la Organización')
-MemberType.create(name: 'Trabajador', description: 'Trabajador en la Organización')
+MemberType.create(id:1, name: 'Administrador', description: 'Administrador de la Organización')
+MemberType.create(id:2, name: 'Trabajador', description: 'Trabajador en la Organización')
 
 # Owner Types
 
-OwnerType.create(name: 'Persona Natural', description: 'Persona Natural')
-OwnerType.create(name: 'Empresa/Organización', description: 'Empresa/Organización')
+OwnerType.create(id:1, name: 'Persona Natural', description: 'Persona Natural')
+OwnerType.create(id:2, name: 'Empresa/Organización', description: 'Empresa/Organización')
 
 # Parking Types
 
-ParkingType.create(name: 'Estacionamiento', description: 'Estacionamiento')
-ParkingType.create(name: 'Garaje', description: 'Garaje')
+ParkingType.create(id:1, name: 'Estacionamiento', description: 'Estacionamiento')
+ParkingType.create(id:2, name: 'Garaje', description: 'Garaje')
 
 # Payment Document Types
 
-PaymentDocumentType.create(name: 'Boleta', description: 'Boleta')
-PaymentDocumentType.create(name: 'Factura', description: 'Factura')
+PaymentDocumentType.create(id:1, name: 'Boleta', description: 'Boleta')
+PaymentDocumentType.create(id:2, name: 'Factura', description: 'Factura')
 
 # Payment Types
 
-PaymentType.create(name: 'Contado', description: 'Contado')
-PaymentType.create(name: 'Tarjeta de Crédito', description: 'Tarjeta de Crédito')
-PaymentType.create(name: 'Tarjeta de Débito', description: 'Tarjeta de Débito')
+PaymentType.create(id:1, name: 'Contado', description: 'Contado')
+PaymentType.create(id:2, name: 'Tarjeta de Crédito', description: 'Tarjeta de Crédito')
+PaymentType.create(id:3, name: 'Tarjeta de Débito', description: 'Tarjeta de Débito')
 

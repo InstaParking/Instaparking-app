@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:Mumero) %></th>
+      <th><%= model_class.human_attribute_name(:Id) %></th>
       <th><%= model_class.human_attribute_name(:Tipo_de_miembro) %></th>
       <th><%= model_class.human_attribute_name(:Organizacion) %></th>
       <th><%= model_class.human_attribute_name(:Usuario) %></th>
@@ -36,5 +36,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_organization_member_path,
+            new_organization_member_path(:organization_id => @organization),
             :class => 'btn btn-primary' %>

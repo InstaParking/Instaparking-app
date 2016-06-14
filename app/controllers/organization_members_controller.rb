@@ -1,10 +1,15 @@
 class OrganizationMembersController < ApplicationController
   before_action :set_organization_member, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /organization_members
   # GET /organization_members.json
   def index
-    @organization_members = OrganizationMember.all
+    if params[:organization_id]
+      @organization = Organization.find(params[:organization_id])
+      @organization_members = @organization.organization_member
+    else  
+      @organization_members = OrganizationMember.all
+    end
   end
 
   # GET /organization_members/1
@@ -15,6 +20,7 @@ class OrganizationMembersController < ApplicationController
   # GET /organization_members/new
   def new
     @organization_member = OrganizationMember.new
+    @organization_member.organization_id = params[:organization_id]
   end
 
   # GET /organization_members/1/edit
