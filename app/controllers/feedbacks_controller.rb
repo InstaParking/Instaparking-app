@@ -15,10 +15,17 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks/new
   def new
     @feedback = Feedback.new
+    
+    @bookings = Booking.all
+    @bookings = @bookings.where(user_id: current_user.id)
   end
 
   # GET /feedbacks/1/edit
   def edit
+    
+    @bookings = Booking.all
+    @bookings = @bookings.where(user_id: current_user.id)
+
   end
 
   # POST /feedbacks
@@ -40,6 +47,7 @@ class FeedbacksController < ApplicationController
   # PATCH/PUT /feedbacks/1
   # PATCH/PUT /feedbacks/1.json
   def update
+    
     respond_to do |format|
       if @feedback.update(feedback_params)
         format.html { redirect_to @feedback, notice: 'Feedback was successfully updated.' }

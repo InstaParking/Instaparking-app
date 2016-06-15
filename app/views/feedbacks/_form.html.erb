@@ -5,8 +5,35 @@
   <%= error_span(@feedback[:comment]) %>
   <%= f.input :score, label: "Puntaje"  %>
   <%= error_span(@feedback[:score]) %>
+  
+  <!--
   <%= f.input :booking_id, label: "Reserva" %>
   <%= error_span(@feedback[:booking_id]) %>
+  -->
+
+  <!--
+  <%= f.association :booking,
+      :as => :collection_select,
+      collection: Booking.where('user_id = ?', current_user.id) {|p| [ p.vehicle_plate, p.id ] },
+      :input_html => {:class => "input-small"},
+      :label => "Reserva"
+  %>
+  -->
+  
+  <%=
+  #collection_select(:feedback, :booking_id, Booking.where('user_id = ?', current_user.id) {|p| [ p.vehicle_plate, p.id ] }, :id, :vehicle_plate)  
+  %>
+
+  <div class="form-group select optional feedback_booking">
+    <label class="select optional control-label" for="feedback_booking_id">Reserva</label>
+    <select class="select optional form-control" name="feedback[booking_id]" id="feedback_booking_id">
+      <option value=""></option>
+      <% @bookings.each do |booking| %>
+        <option value="<%= booking.id %>"><%= booking.parking_place.description %></option>
+      <% end %>
+    </select>
+  </div>
+  <%= error_span(@feedback[:booking_id]) %>  
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

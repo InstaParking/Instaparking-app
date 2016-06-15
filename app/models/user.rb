@@ -27,7 +27,6 @@ class User < ActiveRecord::Base
 
   def name
     friendly_name
-    
   end
 
   def friendly_name
@@ -38,4 +37,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def name_full
+      self.profile.full_name
+  end
+  
 end
