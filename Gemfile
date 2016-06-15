@@ -65,3 +65,6 @@ gem 'ransack'
 # Google Maps
 gem 'geocoder'
 gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'
+
+# Attachments Support
+gem 'paperclip', '~> 4.3'
