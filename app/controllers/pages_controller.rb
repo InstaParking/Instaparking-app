@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
   
   def opinion
+      #Lista de opiniones
+      @feedbacks = Feedback.all
+    
   end
   
   def busqueda

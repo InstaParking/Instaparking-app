@@ -1,3 +1,31 @@
-<h1>Pages#opinion</h1>
-<p>Find me in app/views/pages/opinion.html.erb</p>
-<p>mi página de opinion</p>
+<h1>Opiniones de nuestros Usuarios</h1>
+
+<!--
+<div class="">
+    <ul class="list-group">
+        
+        <% @feedbacks.each do |feed| %>
+        <li class="list-group-item">
+            <h4 class="list-group-item-heading"><%= feed.booking.user.profile.first_name %> </h4>
+            <p><%= feed.comment %></p>
+            <span class="badge text-xs"><%= feed.score %></span>  Puntaje
+        </li>
+        <% end %>
+    </ul>
+</div>
+-->
+
+<% @feedbacks.each do |feed| %>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <div class="panel-heading"> Nombre: <%= feed.booking.user.name %><br/>
+        Puntaje: <span class="badge text-sm"><%= feed.score %></span> <br/>
+        Foto: <%= image_tag feed.booking.user.profile.photo.url(:thumb), class: "img-circle" %>
+        
+    </div>
+  <div class="panel-body">
+    Comentario: <p><%= feed.comment %></p>
+  </div>
+
+</div>
+<% end %>

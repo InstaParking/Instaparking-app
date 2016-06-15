@@ -24,11 +24,14 @@ class User < ActiveRecord::Base
 
   def name
     friendly_name
-    
   end
 
   def friendly_name
     self.profile.first_name.nil? ? self.email : self.profile.full_name
   end
 
+  def name_full
+      self.profile.full_name
+  end
+  
 end
