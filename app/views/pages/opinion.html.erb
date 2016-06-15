@@ -18,11 +18,13 @@
 <% @feedbacks.each do |feed| %>
 <div class="panel panel-default">
   <!-- Default panel contents -->
-    <div class="panel-heading"><%= feed.booking.user.name %><br/>
-        Puntaje: <span class="badge text-sm"><%= feed.score %></span>
+    <div class="panel-heading"> Nombre: <%= feed.booking.user.name %><br/>
+        Puntaje: <span class="badge text-sm"><%= feed.score %></span> <br/>
+        Foto: <%= image_tag feed.booking.user.profile.photo.url(:thumb), class: "img-circle" %>
+        
     </div>
   <div class="panel-body">
-    <p><%= feed.comment %></p>
+    Comentario: <p><%= feed.comment %></p>
   </div>
 
 </div>
