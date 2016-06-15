@@ -27,4 +27,10 @@ class PagesController < ApplicationController
       
   end
   
+  def dashboard
+    @booking_made = Booking.where("user_id=" + current_user.id.to_s).count
+    @booking_received = Booking.joins(:parking_place).where("parking_places.user_id=" + current_user.id.to_s).count
+  end
+
+  
 end

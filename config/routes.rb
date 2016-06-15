@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'pages/dashboard'
+
   get 'pages/busqueda'
 
   get 'pages/opinion'

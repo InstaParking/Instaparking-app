@@ -1,0 +1,15 @@
+<div class="well sidebar-nav">
+<table>
+  <tbody>
+    <tr>
+    <td><%= image_tag current_user.profile.photo.url(:medium), class: "img-circle" %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>
+        <p></p><h1><%= link_to current_user.friendly_name, edit_profile_path(current_user.profile), class: "navbar-link" %></h1></p>
+        <p>Reservas realizadas <h1><%= @booking_made %></h1></p>
+        <p>Reservas recibidas <h1><%= @booking_received %></h1></p>
+    </td>
+    </tr>
+  </tbody>
+</table>
+</div>
