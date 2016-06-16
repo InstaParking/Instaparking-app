@@ -16,8 +16,8 @@ class PagesController < ApplicationController
   
   def recibidas
       #Lista de reservas
-      @bookings = Booking.all
-    
+      #@bookings = Booking.all
+      @bookings = Booking.joins(:parking_place).where("parking_places.user_id=" + current_user.id.to_s)
   end
   
   def busqueda
