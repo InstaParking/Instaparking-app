@@ -226,8 +226,6 @@ ActiveRecord::Schema.define(version: 20160614014311) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "availability_parking_places", "day_of_weeks"
-  add_foreign_key "availability_parking_places", "parking_places"
   add_foreign_key "bookings", "booking_statuses"
   add_foreign_key "bookings", "parking_places"
   add_foreign_key "bookings", "payment_types"

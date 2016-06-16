@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'pages/busqueda'
 
   get 'pages/opinion'
+  
+  get 'pages/recibidas'  
 
   get 'home/search_parking'
 

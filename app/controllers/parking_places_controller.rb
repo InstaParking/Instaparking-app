@@ -4,8 +4,8 @@ class ParkingPlacesController < PageAuthenticateController
   # GET /parking_places
   # GET /parking_places.json
   def index
-    @parking_places = ParkingPlace.all
-    @parking_places = @parking_places.where(user_id: current_user.profile)
+    #@parking_places = ParkingPlace.all
+    @parking_places = ParkingPlace.where("user_id=" + current_user.id.to_s)
     @hash = Gmaps4rails.build_markers(@parking_places) do |parking_place, marker|
       marker.lat parking_place.georeference_x
       marker.lng parking_place.georeference_y

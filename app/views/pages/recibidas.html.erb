@@ -1,0 +1,40 @@
+<%- model_class = Booking -%>
+<div class="page-header">
+  <h1>Reservas Recibidas</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:Codigo) %></th>
+      <th><%= model_class.human_attribute_name(:Reserva) %></th>
+      <th><%= model_class.human_attribute_name(:Fecha_Inicio) %></th>
+      <th><%= model_class.human_attribute_name(:Fecha_Fin) %></th>
+      <th><%= model_class.human_attribute_name(:Placa_Vehiculo) %></th>
+      <th><%= model_class.human_attribute_name(:Monto) %></th>
+      
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= link_to booking.id, booking_path(booking) %></td>
+        <td><%= booking.booking_date %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.finish_date %></td>
+        <td><%= booking.vehicle_plate %></td>
+        <td><%= booking.amount_payable %></td>
+        
+        <td>
+          <%= 
+          link_to "Cancelar",
+              booking_path(booking),
+              data: { confirm: "Seguro de cancelcar la reserva?" },
+              :class => 'btn btn-xs btn-warning'
+              
+          %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

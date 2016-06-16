@@ -14,6 +14,12 @@ class PagesController < ApplicationController
     
   end
   
+  def recibidas
+      #Lista de reservas
+      @bookings = Booking.all
+    
+  end
+  
   def busqueda
       @q = ParkingPlace.ransack(params[:q])
       @parks = @q.result
@@ -21,7 +27,7 @@ class PagesController < ApplicationController
       #Lista de los parques no reservados
       ids = Booking.all.map(&:parking_place_id).to_a
     
-     @park =   @parks.where.not(id: ids)
+      @park =   @parks.where.not(id: ids)
       
       @hash = Gmaps4rails.build_markers(@park) do |parking_place, marker|
       marker.lat parking_place.georeference_x
